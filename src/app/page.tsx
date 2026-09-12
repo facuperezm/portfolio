@@ -7,10 +7,7 @@ import {
   Mail,
 } from "lucide-react";
 
-import {
-  experienceEntries,
-  featuredProjects,
-} from "@/config/career";
+import { experienceEntries, featuredProjects } from "@/config/career";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import ExperienceCard from "@/components/experience-card";
@@ -25,7 +22,7 @@ export default function HomePage() {
     <>
       <Profile />
 
-      <Section id="selected-projects" delay={0.14}>
+      {/* <Section id="selected-projects" delay={0.14}>
         <SectionHeading
           eyebrow="Selected Projects"
           title="Case studies that back up the story"
@@ -37,7 +34,7 @@ export default function HomePage() {
             <Project key={project.title} project={project} index={index} />
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       <Section id="experience" delay={0.2}>
         <SectionHeading
