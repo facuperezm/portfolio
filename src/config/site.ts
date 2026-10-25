@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/facuperezm",
     github: "https://github.com/facuperezm",
     linkedin: "https://linkedin.com/in/facuperezm/",
-    repo: "https://github.com/facuperezm/website",
+    repo: "https://github.com/facuperezm/portfolio",
     email: "mailto:facundoperezmontalvo@gmail.com",
     resume: "/facundo-perez-montalvo-resume.pdf",
   },

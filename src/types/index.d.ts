@@ -35,11 +35,11 @@ export type FeaturedProject = {
 
 export type ExperienceEntry = {
   company: string;
+  url?: string;
   role: string;
   timeframe: string;
-  note?: string;
   summary: string;
-  bullets: string[];
+  highlights?: string[];
 };
 
 export type ResumeRole = {

@@ -1,163 +1,64 @@
-import Link from "next/link";
-import {
-  ArrowUpRight,
-  BriefcaseBusiness,
-  Download,
-  FileText,
-  Mail,
-} from "lucide-react";
-
-import { experienceEntries, featuredProjects } from "@/config/career";
+import { experienceEntries } from "@/config/career";
 import { siteConfig } from "@/config/site";
-import { Button } from "@/components/ui/button";
-import ExperienceCard from "@/components/experience-card";
 import Footer from "@/components/footer";
 import Profile from "@/components/profile";
-import Project from "@/components/project-component";
 import Section from "@/components/section-animate";
-import SectionHeading from "@/components/section-heading";
+import TextLink from "@/components/text-link";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="mx-auto max-w-xl">
       <Profile />
 
-      {/* <Section id="selected-projects" delay={0.14}>
-        <SectionHeading
-          eyebrow="Selected Projects"
-          title="Case studies that back up the story"
-          description="Projects framed as evidence of product thinking, frontend architecture, and implementation quality."
-        />
+      <Section id="experience" delay={0.1}>
+        <h2 className="text-muted-foreground mb-6">Experience</h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {featuredProjects.map((project, index) => (
-            <Project key={project.title} project={project} index={index} />
-          ))}
-        </div>
-      </Section> */}
-
-      <Section id="experience" delay={0.2}>
-        <SectionHeading
-          eyebrow="Experience Snapshot"
-          title="Recent experience, compressed to what matters"
-          description="Current product work first, with earlier experience supporting the story through customer-facing problem solving and hands-on shipping."
-        />
-
-        <div className="grid gap-5 xl:grid-cols-3">
+        <ol className="space-y-8">
           {experienceEntries.map((entry) => (
-            <ExperienceCard
-              key={`${entry.company}-${entry.role}`}
-              entry={entry}
-            />
+            <li key={entry.company}>
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-medium">
+                  {entry.url ? (
+                    <TextLink href={entry.url}>{entry.company}</TextLink>
+                  ) : (
+                    entry.company
+                  )}
+                </h3>
+                <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
+                  {entry.timeframe}
+                </span>
+              </div>
+              <p className="text-muted-foreground">{entry.role}</p>
+              <p className="text-foreground/85 mt-2 leading-7">
+                {entry.summary}
+              </p>
+              {entry.highlights ? (
+                <ul className="text-foreground/85 mt-3 list-disc space-y-2 pl-5 leading-7 marker:text-muted-foreground/60">
+                  {entry.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </li>
           ))}
-        </div>
+        </ol>
       </Section>
 
-      <Section id="resume-and-contact" delay={0.26}>
-        <SectionHeading
-          eyebrow="Resume and Contact"
-          title="Resume, links, and an easy way to reach me"
-          description="If the work feels like a fit, you can grab the resume or send me a note."
-        />
-
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <article className="border-border/80 bg-card/80 rounded-[2rem] border p-6 shadow-[0_24px_90px_-56px_rgba(30,22,12,0.45)]">
-            <div className="mb-5 flex items-center gap-3">
-              <div className="border-border/80 bg-background/80 text-muted-foreground rounded-full border p-2">
-                <FileText className="size-4" />
-              </div>
-              <p className="text-muted-foreground text-sm font-semibold tracking-[0.18em] uppercase">
-                Resume
-              </p>
-            </div>
-
-            <h3 className="font-display text-3xl tracking-tight">
-              Grab the latest resume
-            </h3>
-            <p className="text-muted-foreground mt-3 max-w-[60ch] text-base leading-7">
-              A one-page snapshot of my recent work, focused on recent product
-              UI, and frontend delivery.
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-full px-6">
-                <a href={siteConfig.links.resume} download>
-                  Download PDF
-                  <Download className="size-4" />
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full px-6"
-              >
-                <Link href="/resume">
-                  View Resume
-                  <ArrowUpRight className="size-4" />
-                </Link>
-              </Button>
-            </div>
-          </article>
-
-          <article className="border-border/80 bg-card/80 rounded-[2rem] border p-6 shadow-[0_24px_90px_-56px_rgba(30,22,12,0.45)]">
-            <div className="mb-5 flex items-center gap-3">
-              <div className="border-border/80 bg-background/80 text-muted-foreground rounded-full border p-2">
-                <BriefcaseBusiness className="size-4" />
-              </div>
-              <p className="text-muted-foreground text-sm font-semibold tracking-[0.18em] uppercase">
-                Contact
-              </p>
-            </div>
-
-            <div className="text-muted-foreground space-y-4 text-sm leading-6">
-              <div>
-                <p className="text-foreground font-medium">Email</p>
-                <Link
-                  href={siteConfig.links.email}
-                  className="hover:text-foreground transition-colors duration-200"
-                >
-                  facundoperezmontalvo@gmail.com
-                </Link>
-              </div>
-
-              <div>
-                <p className="text-foreground font-medium">LinkedIn</p>
-                <Link
-                  href={siteConfig.links.linkedin}
-                  className="hover:text-foreground transition-colors duration-200"
-                >
-                  linkedin.com/in/facuperezm
-                </Link>
-              </div>
-
-              <div>
-                <p className="text-foreground font-medium">GitHub</p>
-                <Link
-                  href={siteConfig.links.github}
-                  className="hover:text-foreground transition-colors duration-200"
-                >
-                  github.com/facuperezm
-                </Link>
-              </div>
-            </div>
-
-            <Button
-              asChild
-              variant="ghost"
-              size="lg"
-              className="border-border/80 mt-6 w-full rounded-full border"
-            >
-              <Link href={siteConfig.links.email}>
-                Send an email
-                <Mail className="size-4" />
-              </Link>
-            </Button>
-          </article>
-        </div>
+      <Section id="contact" delay={0.2}>
+        <h2 className="text-muted-foreground mb-6">Connect</h2>
+        <p className="text-foreground/85 leading-7">
+          Reach me at{" "}
+          <TextLink href={siteConfig.links.email}>
+            facundoperezmontalvo@gmail.com
+          </TextLink>{" "}
+          or on <TextLink href={siteConfig.links.linkedin}>LinkedIn</TextLink>.
+          Code lives on{" "}
+          <TextLink href={siteConfig.links.github}>GitHub</TextLink>, and the
+          full history is in my <TextLink href="/resume">resume</TextLink>.
+        </p>
       </Section>
 
       <Footer />
-    </>
+    </div>
   );
 }

@@ -5,12 +5,6 @@ import type {
   ResumeExperienceEntry,
 } from "@/types";
 
-export const heroHighlights = [
-  "React, Next.js, TypeScript",
-  "Product UI, design systems, performance",
-  "Remote from Argentina",
-];
-
 export const proofThemes: ProofTheme[] = [
   {
     title: "Migration and architecture",
@@ -105,38 +99,31 @@ export const featuredProjects: FeaturedProject[] = [
 export const experienceEntries: ExperienceEntry[] = [
   {
     company: "Svitla Systems",
+    url: "https://svitla.com",
     role: "Senior Frontend Developer",
-    timeframe: "January 2025 - Present",
-    note: "Transitioned into cross-team leadership — code reviews, frontend standards, and architecture guidance.",
+    timeframe: "2024 — Now",
     summary:
-      "Build product UI for a family history platform, with work spanning migration support, design implementation, performance, and team-facing frontend patterns.",
-    bullets: [
-      "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — full architecture design, technical documentation, and ahead-of-deadline shipping.",
-      "Drove a platform-wide Next.js migration, resolving critical architectural constraints and translating Figma designs into accessible, production-ready React components.",
-      "Established team-wide coding standards and drove a large-scale legacy code reduction. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
-    ],
-  },
-  {
-    company: "SupportYourApp",
-    role: "Technical Support Consultant & Frontend Developer",
-    timeframe: "August 2023 - August 2024",
-    summary:
-      "Solved technical product issues for end users while combining troubleshooting, communication, and frontend/backend context.",
-    bullets: [
-      "Maintained an average customer satisfaction score of 95% across support work.",
-      "Resolved product issues through a mix of debugging, customer communication, and practical HTML, CSS, and JavaScript fixes.",
+      "Joined as a Middle Frontend Developer and was promoted to Senior in January 2025.",
+    highlights: [
+      "Designed and shipped an AI-powered story creation pipeline end to end, from architecture and technical docs to release ahead of deadline.",
+      "Drove the platform-wide migration to Next.js and turned Figma designs into accessible, production-ready components.",
+      "Set team-wide coding standards, cut a large share of legacy code, and lead code reviews and architecture discussions across teams.",
     ],
   },
   {
     company: "Freelance",
-    role: "Frontend React Developer",
-    timeframe: "March 2022 - Present",
+    role: "Frontend Developer",
+    timeframe: "2022 — Now",
     summary:
-      "Built client-facing web applications for local businesses with a focus on accessibility, responsive behavior, and maintainable frontend delivery.",
-    bullets: [
-      "Delivered production sites and app experiences across hospitality, services, and real estate use cases.",
-      "Handled the full loop from client requirements and UX decisions to implementation and iteration.",
-    ],
+      "Web apps for local businesses in hospitality, services, and real estate, from requirements to deployment.",
+  },
+  {
+    company: "SupportYourApp",
+    url: "https://supportyourapp.com",
+    role: "Technical Support & Frontend",
+    timeframe: "2023 — 2024",
+    summary:
+      "Debugged customer-facing product issues with a 95% satisfaction score, bridging users and product teams.",
   },
 ];
 

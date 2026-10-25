@@ -61,7 +61,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   dateCreated: "2024-01-15",
-  dateModified: "2026-03-18",
+  dateModified: "2026-10-25",
   mainEntity: {
     "@type": "Person",
     name: "Facundo Perez Montalvo",
