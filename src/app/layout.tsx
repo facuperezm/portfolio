@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: "summary_large_image",
-    creator: "@facuperezm",
     title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.description,
   },
@@ -68,11 +67,7 @@ const jsonLd = {
     url: siteConfig.url,
     description: siteConfig.description,
     jobTitle: "Senior Frontend Developer",
-    sameAs: [
-      siteConfig.links.github,
-      siteConfig.links.linkedin,
-      siteConfig.links.twitter,
-    ],
+    sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
     knowsAbout: [
       "JavaScript",
       "React",

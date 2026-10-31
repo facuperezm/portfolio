@@ -9,7 +9,6 @@ export const siteConfig: SiteConfig = {
   url: "https://www.facuperezm.com",
   ogImage: "https://www.facuperezm.com/opengraph-image",
   links: {
-    twitter: "https://twitter.com/facuperezm",
     github: "https://github.com/facuperezm",
     linkedin: "https://linkedin.com/in/facuperezm/",
     repo: "https://github.com/facuperezm/portfolio",
