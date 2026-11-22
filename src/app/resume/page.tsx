@@ -36,7 +36,7 @@ function ExperienceBlock({ entry }: { entry: ResumeExperienceEntry }) {
               </p>
             </div>
 
-            <ul className="mt-1.5 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-1 print:space-y-1 print:text-[10.5px] print:leading-[1.5]">
+            <ul className="mt-1.5 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-1 print:space-y-1 print:text-[10.5px] print:leading-[1.45]">
               {role.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2">
                   <span className="mt-1.5 size-1 shrink-0 rounded-full bg-foreground/75" />
@@ -54,7 +54,7 @@ function ExperienceBlock({ entry }: { entry: ResumeExperienceEntry }) {
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "One-page resume for Facundo Perez Montalvo, Senior Frontend Developer. Covers React, Next.js, TypeScript expertise and product UI work.",
+    "One-page resume for Facundo Perez Montalvo, Frontend Developer. Covers React, Next.js, TypeScript expertise and product UI work.",
   alternates: {
     canonical: `${siteConfig.url}/resume`,
   },
@@ -68,6 +68,7 @@ const stackSections = [
   { title: "Product", items: resumeStack.product },
   { title: "Data and forms", items: resumeStack.data },
   { title: "Testing", items: resumeStack.testing },
+  { title: "AI-assisted development", items: resumeStack.ai },
 ];
 
 export default function ResumePage() {
@@ -108,18 +109,18 @@ export default function ResumePage() {
           </div>
         </div>
 
-        <article className="rounded-[2rem] border border-border/80 bg-card px-5 py-6 shadow-[0_28px_100px_-64px_rgba(30,22,12,0.55)] print:rounded-none print:border-none print:bg-transparent print:px-[18mm] print:py-[15mm] print:shadow-none print:text-stone-800 print:tracking-[0.008em] sm:px-8 sm:py-8">
-          <header className="border-b border-border/70 pb-4 print:pb-3">
+        <article className="rounded-[2rem] border border-border/80 bg-card px-5 py-6 shadow-[0_28px_100px_-64px_rgba(30,22,12,0.55)] print:rounded-none print:border-none print:bg-transparent print:px-[16mm] print:py-[10mm] print:shadow-none print:text-stone-800 print:tracking-[0.008em] sm:px-8 sm:py-8">
+          <header className="border-b border-border/70 pb-4 print:pb-2">
             <div className="space-y-2 print:space-y-1.5">
               <p className="text-[11px] font-semibold tracking-[0.24em] text-muted-foreground uppercase">
-                Senior Frontend Developer
+                Frontend Developer
               </p>
               <h1 className="font-display text-4xl tracking-tight sm:text-5xl print:text-[28px]">
                 Facundo Perez Montalvo
               </h1>
             </div>
 
-            <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:mt-2 print:text-[10.5px] print:leading-[1.5]">
+            <p className="mt-3 max-w-[76ch] text-sm leading-6 text-muted-foreground print:mt-2 print:text-[10.5px] print:leading-[1.45]">
               {resumeSummary}
             </p>
 
@@ -133,13 +134,13 @@ export default function ResumePage() {
           </header>
 
           {/* Both web and print: Experience → Core Stack | Education */}
-          <div className="space-y-8 pt-6 print:space-y-4 print:pt-3">
+          <div className="space-y-8 pt-6 print:space-y-3 print:pt-2">
             <section>
               <h2 className="text-[11px] font-semibold tracking-[0.22em] text-muted-foreground uppercase">
                 Experience
               </h2>
 
-              <div className="mt-4 space-y-5 print:mt-2 print:space-y-3">
+              <div className="mt-4 space-y-5 print:mt-2 print:space-y-2">
                 {resumeExperienceEntries.map((entry) => (
                   <ExperienceBlock key={entry.company} entry={entry} />
                 ))}
@@ -158,7 +159,7 @@ export default function ResumePage() {
                       <h3 className="text-sm font-semibold text-foreground print:text-[11px]">
                         {section.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-6 text-muted-foreground print:text-[10.5px] print:leading-[1.5]">
+                      <p className="mt-1 text-sm leading-6 text-muted-foreground print:text-[10.5px] print:leading-[1.45]">
                         {section.items.join(" · ")}
                       </p>
                     </div>
@@ -170,7 +171,7 @@ export default function ResumePage() {
                 <h2 className="text-[11px] font-semibold tracking-[0.22em] text-muted-foreground uppercase">
                   Education and Languages
                 </h2>
-                <ul className="mt-4 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-2 print:text-[10.5px] print:leading-[1.5]">
+                <ul className="mt-4 space-y-1.5 text-sm leading-6 text-muted-foreground print:mt-2 print:text-[10.5px] print:leading-[1.45]">
                   {resumeEducation.map((item) => (
                     <li key={item}>{item}</li>
                   ))}

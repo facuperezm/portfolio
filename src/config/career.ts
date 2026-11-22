@@ -139,6 +139,7 @@ export const resumeExperienceEntries: ResumeExperienceEntry[] = [
           "Owned end-to-end delivery of complex features including an AI-powered story creation pipeline — designed the full architecture (Zustand state machine, dual user flows, feature flags), wrote technical documentation before implementation, and shipped ahead of deadline.",
           "Drove a platform-wide Next.js migration, resolving critical architectural constraints. Translated Figma designs into accessible, production-ready React components with strong attention to design system consistency and performance.",
           "Established team-wide coding standards and drove a large-scale legacy code reduction. Grew into cross-team leadership — conducting code reviews, guiding architecture, and partnering with backend and QA on delivery quality.",
+          "Use Claude Code and several other harnesses in the ever-evolving world of AI as part of the daily workflow, while shipping AI-powered features for a family history platform.",
         ],
       },
       {
@@ -184,7 +185,7 @@ export const resumeExperienceEntries: ResumeExperienceEntry[] = [
 ];
 
 export const resumeSummary =
-  "Senior Frontend Developer with a product-minded approach to React, Next.js, and TypeScript. I build polished interfaces, translate design systems into production code, and collaborate across product, QA, and backend to ship reliable user experiences.";
+  "Frontend Developer with a product-minded approach to React, Next.js, and TypeScript. I build polished interfaces, translate design systems into production code, and collaborate across product, QA, and backend to ship reliable user experiences.";
 
 export const resumeStack = {
   frontend: [
@@ -198,6 +199,7 @@ export const resumeStack = {
   product: ["Design implementation", "Accessibility", "Performance", "SEO"],
   data: ["TanStack Query", "Zustand", "Zod", "React Hook Form", "Prisma", "Drizzle ORM"],
   testing: ["Playwright", "Vitest", "React Testing Library", "Storybook"],
+  ai: ["Claude Code", "Cursor", "ChatGPT"],
 };
 
 export const resumeEducation = [
